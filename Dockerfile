@@ -1,4 +1,4 @@
-FROM ubuntu:trusty
+FROM ubuntu:xenial
 MAINTAINER Tomas Markauskas <tomas@dawanda.com>
 
 RUN apt-get update \

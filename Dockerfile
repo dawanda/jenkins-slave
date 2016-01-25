@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM ubuntu:14.04
 MAINTAINER Tomas Markauskas <tomas@dawanda.com>
 
 RUN apt-get update \

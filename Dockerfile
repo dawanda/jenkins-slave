@@ -1,8 +1,11 @@
 FROM ubuntu:14.04
 MAINTAINER Tomas Markauskas <tomas@dawanda.com>
 
+RUN locale-gen en_US.utf8
+ENV LANG=en_US.utf8 LC_ALL=en_US.utf8
+
 RUN apt-get update \
-    && apt-get -y install openjdk-7-jre-headless git wget ruby make
+    && apt-get -y install openjdk-7-jre-headless git wget ruby make curl wget ca-certificates
 
 RUN wget -O /usr/local/bin/docker https://get.docker.com/builds/Linux/x86_64/docker-1.8.0 \
     && chmod +x /usr/local/bin/docker

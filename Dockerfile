@@ -15,7 +15,30 @@ RUN wget -O /usr/local/bin/docker-compose https://github.com/docker/compose/rele
 
 ENV RUBY_VERSION=2.3.0
 
-RUN apt-get -y install build-essential
+RUN apt-get -y install build-essential \
+       libffi-dev \
+       libgdbm-dev \
+       libncurses5-dev \
+       libreadline-dev \
+       libssl-dev \
+       libyaml-dev \
+       zlib1g-dev \
+       libxml2-dev \
+       libxslt-dev \
+       curl \
+       wget \
+       git \
+       libjansson-dev \
+       libmysqlclient-dev \
+       libhiredis-dev \
+       libmagickcore-dev \
+       libmagickwand-dev \
+       imagemagick \
+       nodejs \
+       vim \
+       ca-certificates \
+       zip
+
 
 
 RUN curl -L -o /tmp/ruby-build.tar.gz \

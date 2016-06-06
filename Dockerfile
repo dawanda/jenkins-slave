@@ -7,10 +7,10 @@ ENV LANG=en_US.utf8 LC_ALL=en_US.utf8
 RUN apt-get update \
     && apt-get -y install openjdk-7-jre-headless git wget make curl wget ca-certificates
 
-RUN wget -O /usr/local/bin/docker https://get.docker.com/builds/Linux/x86_64/docker-1.8.0 \
+RUN wget -O /usr/local/bin/docker https://get.docker.com/builds/Linux/x86_64/docker-1.10.0 \
     && chmod +x /usr/local/bin/docker
 
-RUN wget -O /usr/local/bin/docker-compose https://github.com/docker/compose/releases/download/1.5.2/docker-compose-Linux-x86_64 \
+RUN wget -O /usr/local/bin/docker-compose https://github.com/docker/compose/releases/download/1.7.1/docker-compose-Linux-x86_64 \
     && chmod +x /usr/local/bin/docker-compose
 
 ENV RUBY_VERSION=2.3.0
@@ -38,8 +38,6 @@ RUN apt-get -y install build-essential \
        vim \
        ca-certificates \
        zip
-
-
 
 RUN curl -L -o /tmp/ruby-build.tar.gz \
   https://github.com/sstephenson/ruby-build/archive/master.tar.gz \

@@ -15,5 +15,5 @@ Once it is successfully built, the Jenkins configuration has to be changed to us
 2. Go to [Configure System](https://jenkins.dawanda.in/configure)
 3. Go to the Cloud section of the Configure System page 
 4. Click on the `Advanced...` button, then some new fields appear, with another `Advanced...` button, click on this one too.
-5. Change the field `Docker image` to have the latest successful build of `jenkins-slave` like so: `docker-registry.dawanda.in/jenkins-slave:build_26`
+5. Change the field `Docker image` to have the latest successful build of `jenkins-slave` like so: `docker-registry.dawanda.in/jenkins-slave:build_12345` (`12345` being your build number...)
 6. Save changes with the `Save` button (Yep, surprising, isn't it?)

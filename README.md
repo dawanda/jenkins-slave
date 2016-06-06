@@ -7,6 +7,7 @@ Repository of the docker image used by our Jenkins slaves.
 ### How to Use the Docker Image
 
 Whenever master changes, Jenkins will build the new Docker image.
+Have a look [here](https://jenkins.dawanda.in/job/jenkins-slave/)
 Once it is successfully built, the Jenkins configuration has to be changed to use it.
 
 ##### Steps

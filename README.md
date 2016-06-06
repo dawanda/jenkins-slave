@@ -2,7 +2,7 @@
 
 ### Introduction
 
-Repository of the docker image used by our Jenkins slaves.
+Docker image used by our Jenkins slaves.
 
 ### How to Use the Docker Image
 

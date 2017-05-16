@@ -54,7 +54,7 @@ ENV GEM_HOME=/usr/local/bundle \
 RUN mkdir -p /opt/jenkins
 ADD run.sh /opt/jenkins/
 WORKDIR /opt/jenkins/
-RUN wget http://maven.jenkins-ci.org/content/repositories/releases/org/jenkins-ci/plugins/swarm-client/2.0/swarm-client-2.0-jar-with-dependencies.jar
+RUN wget https://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/2.0/swarm-client-2.0-jar-with-dependencies.jar
 
 ENV JENKINS_MASTER http://rack1-compute1:8081/
 

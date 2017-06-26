@@ -1,0 +1,6 @@
+#!/bin/bash
+
+pwd
+env
+
+java -jar swarm-client-2.2-jar-with-dependencies.jar -master $JENKINS_MASTER

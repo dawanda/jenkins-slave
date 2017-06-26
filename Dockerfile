@@ -1,11 +1,11 @@
-FROM ubuntu:14.04
-MAINTAINER Tomas Markauskas <tomas@dawanda.com>
+FROM ubuntu:16.04
+MAINTAINER Infra <infrateam@dawanda.com>
+
+RUN apt-get update \
+    && apt-get -y install locales openjdk-8-jre-headless git wget make curl wget ca-certificates
 
 RUN locale-gen en_US.utf8
 ENV LANG=en_US.utf8 LC_ALL=en_US.utf8
-
-RUN apt-get update \
-    && apt-get -y install openjdk-7-jre-headless git wget make curl wget ca-certificates
 
 RUN wget -O /usr/local/bin/docker https://get.docker.com/builds/Linux/x86_64/docker-1.10.0 \
     && chmod +x /usr/local/bin/docker
@@ -52,10 +52,10 @@ ENV GEM_HOME=/usr/local/bundle \
     PATH=/usr/local/bundle/bin:/opt/$RUBY_VERSION/bin:$PATH
 
 RUN mkdir -p /opt/jenkins
-ADD run.sh /opt/jenkins/
 WORKDIR /opt/jenkins/
-RUN wget https://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/2.0/swarm-client-2.0-jar-with-dependencies.jar
+ADD run-agent /
+RUN wget https://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/2.2/swarm-client-2.2-jar-with-dependencies.jar
 
-ENV JENKINS_MASTER http://rack1-compute1:8081/
+ENV JENKINS_MASTER http://rack5-compute3:10015/
 
-CMD ["/opt/jenkins/run.sh"]
+CMD ["/run-agent"]
